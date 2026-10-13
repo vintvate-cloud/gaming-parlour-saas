@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: gaming-parlour-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DB_PROVIDER
+        value: mongo
+      - key: MONGODB_URI
+        sync: false # set this manually in the Render dashboard - it's a secret
+      - key: JWT_SECRET
+        generateValue: true # Render will generate a random secret automatically
+      - key: CORS_ORIGIN
+        value: "*" # tighten this to your actual Vercel URL after first deploy

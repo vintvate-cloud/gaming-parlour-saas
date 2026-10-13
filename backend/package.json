@@ -1,0 +1,28 @@
+{
+  "name": "gaming-parlour-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Gaming Parlour Station Management System",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/utils/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1",
+    "google-spreadsheet": "^4.1.4",
+    "google-auth-library": "^9.11.0",
+    "exceljs": "^4.4.0",
+    "pdf-lib": "^1.17.1",
+    "mongodb": "^6.8.0"
+  }
+}
